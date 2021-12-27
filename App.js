@@ -1,6 +1,5 @@
 import React from "react";
 import { StyleSheet, View, TouchableOpacity, Text } from "react-native";
-import { NativeRouter, Routes, Route, Link } from "react-router-native";
 import Home from "../quizapp/App/pages/Home";
 
 const App = () => {
