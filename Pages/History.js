@@ -80,6 +80,7 @@ const History = () => {
             fontSize: 18,
             textAlign: "center",
             marginBottom: 10,
+            marginTop: 10,
           }}
         >
           {currentQuestionIndex + 1}&nbsp;/ {allQuestions.length}
@@ -185,20 +186,22 @@ const History = () => {
   const renderNextButton = () => {
     if (showNextButton) {
       return (
-        <TouchableOpacity
-          onPress={handleNext}
-          style={{
-            marginTop: 20,
-            width: "50%",
-            backgroundColor: "#ffba08",
-            padding: 8,
-            borderRadius: 7,
-          }}
-        >
-          <Text style={{ fontSize: 16, color: "white", textAlign: "center" }}>
-            Next
-          </Text>
-        </TouchableOpacity>
+        <View style={styles.buttondiv}>
+          <TouchableOpacity
+            onPress={handleNext}
+            style={{
+              marginTop: 20,
+              width: "50%",
+              backgroundColor: "#ffba08",
+              padding: 8,
+              borderRadius: 7,
+            }}
+          >
+            <Text style={{ fontSize: 16, color: "white", textAlign: "center" }}>
+              Next
+            </Text>
+          </TouchableOpacity>
+        </View>
       );
     } else {
       return null;
@@ -355,5 +358,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginBottom: 15,
+  },
+  buttondiv: {
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
