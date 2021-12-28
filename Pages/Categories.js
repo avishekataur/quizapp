@@ -1,12 +1,17 @@
 import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
 
-const Categories = () => {
+interface historyProps {
+  navigation: any;
+}
+
+const Categories = (props: historyProps) => {
+  const history = () => props.navigation.navigate("HISTORY");
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Choose Any Category</Text>
       <View style={styles.buttondiv}>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={history}>
           <Text style={styles.buttontext}>History</Text>
         </TouchableOpacity>
       </View>

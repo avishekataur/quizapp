@@ -6,6 +6,7 @@ import Home from "./Home";
 import Categories from "./Categories";
 import Question from "./Question";
 import Result from "./Result";
+import History from "./History";
 
 const Stack = createStackNavigator();
 
@@ -21,6 +22,7 @@ const AppNavigator = () => {
         <Stack.Screen name="CATEGORIES" component={Categories} />
         <Stack.Screen name="QUESTION" component={Question} />
         <Stack.Screen name="RESULT" component={Result} />
+        <Stack.Screen name="HISTORY" component={History} />
       </Stack.Navigator>
     </NavigationContainer>
   );
