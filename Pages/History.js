@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
 import data from "../data/data";
 
 const History = () => {
@@ -13,7 +13,7 @@ const History = () => {
           marginVertical: 40,
         }}
       >
-        {/* Question Counter */}
+        {/* Question Counter//////////////////////////////// */}
 
         <Text
           style={{
@@ -25,18 +25,18 @@ const History = () => {
           {currentQuestionIndex + 1}&nbsp;/ {allQuestions.length}
         </Text>
 
-        {/* Question */}
+        {/* Question/////////////////////////////////////////// */}
         <Text
           style={{
             color: "#ffba08",
-            fontSize: 30,
+            fontSize: 25,
             textAlign: "center",
           }}
         >
           {allQuestions[currentQuestionIndex]?.question}
         </Text>
       </View>
-      {/* Options //////////////////////////////////////////////////// */}
+      {/* Options////////////////////////////////////////////// */}
       {allQuestions[currentQuestionIndex]?.options.map((option) => (
         <View key={option} style={styles.buttondiv}>
           <TouchableOpacity style={styles.button}>
@@ -44,6 +44,12 @@ const History = () => {
           </TouchableOpacity>
         </View>
       ))}
+      <View style={styles.frame}>
+        <Image
+          style={styles.banner}
+          source={require("../Images/Question.png")}
+        />
+      </View>
     </View>
   );
 };
@@ -63,15 +69,23 @@ const styles = StyleSheet.create({
   button: {
     width: "80%",
     backgroundColor: "#e85d04",
-    padding: 10,
+    padding: 5,
     borderRadius: 16,
-    borderWidth: 4,
+    borderWidth: 2,
     borderColor: "#ffba08",
     marginVertical: 5,
   },
   buttontext: {
     color: "white",
-    fontSize: 20,
-    textAlign: "left",
+    fontSize: 16,
+    textAlign: "center",
+  },
+  banner: {
+    width: 180,
+    height: 180,
+  },
+  frame: {
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
