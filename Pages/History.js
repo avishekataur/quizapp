@@ -7,25 +7,42 @@ const History = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
 
   return (
-    <View>
-      {allQuestions[currentQuestionIndex]?.options.map((option) => (
-        <TouchableOpacity
-          key={option}
+    <View style={styles.container}>
+      <View
+        style={{
+          marginVertical: 40,
+        }}
+      >
+        {/* Question Counter */}
+
+        <Text
           style={{
-            borderWidth: 3,
-            borderColor: "white",
-            backgroundColor: "blue",
-            height: 60,
-            borderRadius: 20,
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "space-between",
-            paddingHorizontal: 20,
-            marginVertical: 10,
+            color: "#ffba08",
+            fontSize: 18,
+            textAlign: "center",
           }}
         >
-          <Text style={{ fontSize: 20, color: "white" }}>{option}</Text>
-        </TouchableOpacity>
+          {currentQuestionIndex + 1}&nbsp;/ {allQuestions.length}
+        </Text>
+
+        {/* Question */}
+        <Text
+          style={{
+            color: "#ffba08",
+            fontSize: 30,
+            textAlign: "center",
+          }}
+        >
+          {allQuestions[currentQuestionIndex]?.question}
+        </Text>
+      </View>
+      {/* Options //////////////////////////////////////////////////// */}
+      {allQuestions[currentQuestionIndex]?.options.map((option) => (
+        <View key={option} style={styles.buttondiv}>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.buttontext}>{option}</Text>
+          </TouchableOpacity>
+        </View>
       ))}
     </View>
   );
@@ -33,4 +50,28 @@ const History = () => {
 
 export default History;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "#03071e",
+    flex: 1,
+    paddingHorizontal: 20,
+  },
+  buttondiv: {
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  button: {
+    width: "80%",
+    backgroundColor: "#e85d04",
+    padding: 10,
+    borderRadius: 16,
+    borderWidth: 4,
+    borderColor: "#ffba08",
+    marginVertical: 5,
+  },
+  buttontext: {
+    color: "white",
+    fontSize: 20,
+    textAlign: "left",
+  },
+});
