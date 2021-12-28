@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, View, TouchableOpacity, Text } from "react-native";
-import Home from "../quizapp/App/pages/Home";
+import Home from "./Pages/Home";
 
 const App = () => {
   return (

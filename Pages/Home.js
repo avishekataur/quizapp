@@ -7,10 +7,7 @@ const Home = () => {
       <Text style={styles.tinytext}>Welcome To</Text>
       <Text style={styles.text}>QUIZPRO</Text>
       <View style={styles.frame}>
-        <Image
-          style={styles.banner}
-          source={require("../../Images/banner.png")}
-        />
+        <Image style={styles.banner} source={require("../Images/banner.png")} />
       </View>
       <Text style={styles.text}>Let's Start</Text>
       <View style={styles.buttondiv}>
