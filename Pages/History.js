@@ -140,7 +140,7 @@ const History = () => {
               marginHorizontal: 30,
             }}
           >
-            <Text style={{ fontSize: 16, color: "white" }}>{option}</Text>
+            <Text style={{ marginLeft: 10, fontSize: 16, color: "white" }}>{option}</Text>
 
             {/* Show Check Or Cross Icon based on correct answer*/}
             {option == correctOption ? (
