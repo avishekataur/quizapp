@@ -8,33 +8,33 @@ const History = () => {
 
   return (
     <View style={styles.container}>
-      <View
+      {/* Question Counter//////////////////////////////// */}
+      <Text
         style={{
-          marginVertical: 40,
+          color: "#ffba08",
+          fontSize: 18,
+          textAlign: "center",
+          marginBottom: 10,
         }}
       >
-        {/* Question Counter//////////////////////////////// */}
+        {currentQuestionIndex + 1}&nbsp;/ {allQuestions.length}
+      </Text>
 
-        <Text
-          style={{
-            color: "#ffba08",
-            fontSize: 18,
-            textAlign: "center",
-          }}
-        >
-          {currentQuestionIndex + 1}&nbsp;/ {allQuestions.length}
-        </Text>
-
-        {/* Question/////////////////////////////////////////// */}
-        <Text
-          style={{
-            color: "#ffba08",
-            fontSize: 25,
-            textAlign: "center",
-          }}
-        >
-          {allQuestions[currentQuestionIndex]?.question}
-        </Text>
+      {/* Question/////////////////////////////////////////// */}
+      <Text
+        style={{
+          color: "#ffba08",
+          fontSize: 25,
+          textAlign: "center",
+        }}
+      >
+        {allQuestions[currentQuestionIndex]?.question}
+      </Text>
+      <View style={styles.frame}>
+        <Image
+          style={styles.banner}
+          source={require("../Images/Question.png")}
+        />
       </View>
       {/* Options////////////////////////////////////////////// */}
       {allQuestions[currentQuestionIndex]?.options.map((option) => (
@@ -44,12 +44,6 @@ const History = () => {
           </TouchableOpacity>
         </View>
       ))}
-      <View style={styles.frame}>
-        <Image
-          style={styles.banner}
-          source={require("../Images/Question.png")}
-        />
-      </View>
     </View>
   );
 };
@@ -61,6 +55,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#03071e",
     flex: 1,
     paddingHorizontal: 20,
+    paddingTop: 30,
   },
   buttondiv: {
     justifyContent: "center",
@@ -87,5 +82,6 @@ const styles = StyleSheet.create({
   frame: {
     justifyContent: "center",
     alignItems: "center",
+    marginBottom: 15,
   },
 });
