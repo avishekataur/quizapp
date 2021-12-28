@@ -1,13 +1,14 @@
 import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
 
-interface historyProps {
+interface categoriesProps {
   navigation: any;
 }
 
-const Categories = (props: historyProps) => {
+const Categories = (props: categoriesProps) => {
   const history = () => props.navigation.navigate("HISTORY");
   const science = () => props.navigation.navigate("TECHNOLOGY_SCIENCE");
+  const geography = () => props.navigation.navigate("GEOGRAPHY");
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Choose Any Category</Text>
@@ -22,7 +23,7 @@ const Categories = (props: historyProps) => {
         </TouchableOpacity>
       </View>
       <View style={styles.buttondiv}>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={geography}>
           <Text style={styles.buttontext}>Geography</Text>
         </TouchableOpacity>
       </View>
