@@ -10,11 +10,11 @@ import {
   Modal,
   Animated,
 } from "react-native";
-import historyData from "../data/historyData";
+import scienceData from "../data/scienceData";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
-const History = () => {
-  const allQuestions = historyData;
+const Science = () => {
+  const allQuestions = scienceData;
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [currentOptionSelected, setCurrentOptionSelected] = useState(null);
   const [correctOption, setCorrectOption] = useState(null);
@@ -351,7 +351,7 @@ const History = () => {
   );
 };
 
-export default History;
+export default Science;
 
 const styles = StyleSheet.create({
   banner: {

@@ -4,9 +4,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "./Home";
 import Categories from "./Categories";
-import Question from "./Question";
-import Result from "./Result";
 import History from "./History";
+import Science from "./Science";
 
 const Stack = createStackNavigator();
 
@@ -20,9 +19,8 @@ const AppNavigator = () => {
           component={Home}
         />
         <Stack.Screen name="CATEGORIES" component={Categories} />
-        <Stack.Screen name="QUESTION" component={Question} />
-        <Stack.Screen name="RESULT" component={Result} />
         <Stack.Screen name="HISTORY" component={History} />
+        <Stack.Screen name="TECHNOLOGY_SCIENCE" component={Science} />
       </Stack.Navigator>
     </NavigationContainer>
   );

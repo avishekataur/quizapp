@@ -7,6 +7,7 @@ interface historyProps {
 
 const Categories = (props: historyProps) => {
   const history = () => props.navigation.navigate("HISTORY");
+  const science = () => props.navigation.navigate("TECHNOLOGY_SCIENCE");
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Choose Any Category</Text>
@@ -16,7 +17,7 @@ const Categories = (props: historyProps) => {
         </TouchableOpacity>
       </View>
       <View style={styles.buttondiv}>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={science}>
           <Text style={styles.buttontext}>Technology &amp; Science</Text>
         </TouchableOpacity>
       </View>
