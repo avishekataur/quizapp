@@ -6,7 +6,7 @@ export default data = [
     },
     {
         question: "What attraction in India is one of the famus in the world?",
-        options: ["Chand Minar","Taj Mahal","Stadium"],
+        options: ["Chand Minar","Taj Mahal","Stadium","Kutub Minar"],
         correct_option: "Taj Mahal"
     },
     {
