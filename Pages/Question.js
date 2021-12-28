@@ -1,14 +1,14 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
 
 const Question = () => {
-    return (
-        <View>
-            <Text>Questions</Text>
-        </View>
-    )
-}
+  return (
+    <View>
+      <Text>Questions</Text>
+    </View>
+  );
+};
 
-export default Question
+export default Question;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});

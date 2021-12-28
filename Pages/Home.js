@@ -1,5 +1,12 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, TouchableOpacity, Alert } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  Alert,
+} from "react-native";
 
 const Home = () => {
   const categories = () => Alert.alert("Not Working");
@@ -26,6 +33,7 @@ export default Home;
 const styles = StyleSheet.create({
   container: {
     paddingTop: 70,
+    backgroundColor: "#03071e",
   },
   tinytext: {
     fontSize: 25,

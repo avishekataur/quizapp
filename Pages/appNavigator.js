@@ -1,16 +1,27 @@
 import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
+import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
-import Home from "../Pages/Home.js";
+import { createStackNavigator } from "@react-navigation/stack";
+import Home from "./Home";
+import Categories from "./Categories";
+import Question from "./Question";
+import Result from "./Result";
 
-const { Navigator, Screen } = createStackNavigator();
+const Stack = createStackNavigator();
 
-const AppNavigator = () => (
-  <NavigationContainer>
-    <Navigator headerMode="none" initialRouteName="Home">
-      <Screen name="Home" component={Home}></Screen>
-    </Navigator>
-  </NavigationContainer>
-);
+const AppNavigator = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator headerMode="none" initialRouteName="home">
+        <Stack.Screen name="home" component={Home} />
+        <Stack.Screen name="categories" component={Categories} />
+        <Stack.Screen name="question" component={Question} />
+        <Stack.Screen name="result" component={Result} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
 
 export default AppNavigator;
+
+const styles = StyleSheet.create({});
