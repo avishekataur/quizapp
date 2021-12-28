@@ -3,6 +3,7 @@ import {
   View,
   Text,
   SafeAreaView,
+  StyleSheet,
   StatusBar,
   Image,
   TouchableOpacity,
@@ -71,45 +72,39 @@ const History = () => {
 
   const renderQuestion = () => {
     return (
-      <View
-        style={{
-          marginVertical: 40,
-        }}
-      >
-        {/* Question Counter */}
-        <View
+      <View>
+        {/* Question Counter//////////////////////////////// */}
+        <Text
           style={{
-            flexDirection: "row",
-            alignItems: "flex-end",
+            color: "#ffba08",
+            fontSize: 18,
+            textAlign: "center",
+            marginBottom: 10,
           }}
         >
-          <Text
-            style={{
-              color: 'white',
-              fontSize: 20,
-              opacity: 0.6,
-              marginRight: 2,
-            }}
-          >
-            {currentQuestionIndex + 1}
-          </Text>
-          <Text style={{ color: 'white', fontSize: 18, opacity: 0.6 }}>
-            / {allQuestions.length}
-          </Text>
-        </View>
+          {currentQuestionIndex + 1}&nbsp;/ {allQuestions.length}
+        </Text>
 
         {/* Question */}
         <Text
           style={{
-            color: 'white',
-            fontSize: 30,
+            color: "#ffba08",
+            fontSize: 25,
+            textAlign: "center",
           }}
         >
           {allQuestions[currentQuestionIndex]?.question}
         </Text>
+        <View style={styles.frame}>
+          <Image
+            style={styles.banner}
+            source={require("../Images/Question.png")}
+          />
+        </View>
       </View>
     );
   };
+  // Options //////////////////////////////////////////////////
   const renderOptions = () => {
     return (
       <View>
@@ -119,38 +114,39 @@ const History = () => {
             disabled={isOptionsDisabled}
             key={option}
             style={{
-              borderWidth: 3,
+              borderWidth: 4,
               borderColor:
                 option == correctOption
-                  ? 'green'
+                  ? "green"
                   : option == currentOptionSelected
-                  ? 'red'
-                  : 'blue' + "40",
+                  ? "red"
+                  : "#e85d04",
               backgroundColor:
                 option == correctOption
-                  ? 'green' + "20"
+                  ? "green"
                   : option == currentOptionSelected
-                  ? 'red' + "20"
-                  : 'blue' + "20",
-              height: 60,
+                  ? "red"
+                  : "#e85d04",
+
               borderRadius: 20,
+              borderWidth: 2,
+              borderColor: "#ffba08",
               flexDirection: "row",
               alignItems: "center",
               justifyContent: "space-between",
-              paddingHorizontal: 20,
-              marginVertical: 10,
+              padding: 5,
+              marginVertical: 5,
+              marginHorizontal: 30,
             }}
           >
-            <Text style={{ fontSize: 20, color: 'white' }}>{option}</Text>
+            <Text style={{ fontSize: 16, color: "white" }}>{option}</Text>
 
             {/* Show Check Or Cross Icon based on correct answer*/}
             {option == correctOption ? (
               <View
                 style={{
-                  width: 30,
-                  height: 30,
-                  borderRadius: 30 / 2,
-                  backgroundColor: 'green',
+                  borderRadius: 16,
+                  backgroundColor: "green",
                   justifyContent: "center",
                   alignItems: "center",
                 }}
@@ -158,7 +154,7 @@ const History = () => {
                 <MaterialCommunityIcons
                   name="check"
                   style={{
-                    color: 'white',
+                    color: "white",
                     fontSize: 20,
                   }}
                 />
@@ -166,10 +162,8 @@ const History = () => {
             ) : option == currentOptionSelected ? (
               <View
                 style={{
-                  width: 30,
-                  height: 30,
-                  borderRadius: 30 / 2,
-                  backgroundColor: 'red',
+                  borderRadius: 16,
+                  backgroundColor: "red",
                   justifyContent: "center",
                   alignItems: "center",
                 }}
@@ -177,7 +171,7 @@ const History = () => {
                 <MaterialCommunityIcons
                   name="close"
                   style={{
-                    color: 'white',
+                    color: "white",
                     fontSize: 20,
                   }}
                 />
@@ -196,14 +190,12 @@ const History = () => {
           style={{
             marginTop: 20,
             width: "100%",
-            backgroundColor: 'goldenrod',
+            backgroundColor: "goldenrod",
             padding: 20,
             borderRadius: 5,
           }}
         >
-          <Text
-            style={{ fontSize: 20, color: 'white', textAlign: "center" }}
-          >
+          <Text style={{ fontSize: 20, color: "white", textAlign: "center" }}>
             Next
           </Text>
         </TouchableOpacity>
@@ -225,7 +217,7 @@ const History = () => {
           width: "100%",
           height: 20,
           borderRadius: 20,
-          backgroundColor: "#00000020",
+          backgroundColor: "#ffba08",
         }}
       >
         <Animated.View
@@ -233,7 +225,7 @@ const History = () => {
             {
               height: 20,
               borderRadius: 20,
-              backgroundColor: 'goldenrod',
+              backgroundColor: "#e85d04",
             },
             {
               width: progressAnim,
@@ -250,13 +242,13 @@ const History = () => {
         flex: 1,
       }}
     >
-      <StatusBar barStyle="light-content" backgroundColor='tomato' />
+      <StatusBar barStyle="light-content" backgroundColor="tomato" />
       <View
         style={{
           flex: 1,
           paddingVertical: 40,
           paddingHorizontal: 16,
-          backgroundColor: 'darkblue',
+          backgroundColor: "#03071e",
           position: "relative",
         }}
       >
@@ -281,14 +273,14 @@ const History = () => {
           <View
             style={{
               flex: 1,
-              backgroundColor: 'red',
+              backgroundColor: "red",
               alignItems: "center",
               justifyContent: "center",
             }}
           >
             <View
               style={{
-                backgroundColor: 'white',
+                backgroundColor: "white",
                 width: "90%",
                 borderRadius: 20,
                 padding: 20,
@@ -310,10 +302,7 @@ const History = () => {
                 <Text
                   style={{
                     fontSize: 30,
-                    color:
-                      score > allQuestions.length / 2
-                        ? 'green'
-                        : 'red',
+                    color: score > allQuestions.length / 2 ? "green" : "red",
                   }}
                 >
                   {score}
@@ -321,7 +310,7 @@ const History = () => {
                 <Text
                   style={{
                     fontSize: 20,
-                    color: 'black',
+                    color: "black",
                   }}
                 >
                   / {allQuestions.length}
@@ -331,7 +320,7 @@ const History = () => {
               <TouchableOpacity
                 onPress={restartQuiz}
                 style={{
-                  backgroundColor: 'tomato',
+                  backgroundColor: "tomato",
                   padding: 20,
                   width: "100%",
                   borderRadius: 20,
@@ -340,7 +329,7 @@ const History = () => {
                 <Text
                   style={{
                     textAlign: "center",
-                    color: 'white',
+                    color: "white",
                     fontSize: 20,
                   }}
                 >
@@ -356,3 +345,15 @@ const History = () => {
 };
 
 export default History;
+
+const styles = StyleSheet.create({
+  banner: {
+    width: 180,
+    height: 180,
+  },
+  frame: {
+    justifyContent: "center",
+    alignItems: "center",
+    marginBottom: 15,
+  },
+});
