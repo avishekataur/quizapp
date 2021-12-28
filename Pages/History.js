@@ -189,13 +189,13 @@ const History = () => {
           onPress={handleNext}
           style={{
             marginTop: 20,
-            width: "100%",
-            backgroundColor: "goldenrod",
-            padding: 20,
-            borderRadius: 5,
+            width: "50%",
+            backgroundColor: "#ffba08",
+            padding: 8,
+            borderRadius: 7,
           }}
         >
-          <Text style={{ fontSize: 20, color: "white", textAlign: "center" }}>
+          <Text style={{ fontSize: 16, color: "white", textAlign: "center" }}>
             Next
           </Text>
         </TouchableOpacity>
@@ -215,7 +215,7 @@ const History = () => {
       <View
         style={{
           width: "100%",
-          height: 20,
+          height: 10,
           borderRadius: 20,
           backgroundColor: "#ffba08",
         }}
@@ -223,7 +223,7 @@ const History = () => {
         <Animated.View
           style={[
             {
-              height: 20,
+              height: 10,
               borderRadius: 20,
               backgroundColor: "#e85d04",
             },
@@ -246,7 +246,7 @@ const History = () => {
       <View
         style={{
           flex: 1,
-          paddingVertical: 40,
+          paddingVertical: 20,
           paddingHorizontal: 16,
           backgroundColor: "#03071e",
           position: "relative",
