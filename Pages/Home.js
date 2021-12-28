@@ -1,7 +1,9 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity, Alert } from "react-native";
 
 const Home = () => {
+  const categories = () => Alert.alert("Not Working");
+
   return (
     <View style={styles.container}>
       <Text style={styles.tinytext}>Welcome To</Text>
@@ -11,7 +13,7 @@ const Home = () => {
       </View>
       <Text style={styles.text}>Let's Start</Text>
       <View style={styles.buttondiv}>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={categories}>
           <Text style={styles.buttontext}>OK</Text>
         </TouchableOpacity>
       </View>

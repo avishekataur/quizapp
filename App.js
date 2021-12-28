@@ -3,17 +3,14 @@ import { StyleSheet, View, TouchableOpacity, Text } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "./Pages/Home";
+import Categories from "./Pages/Categories";
 
 const Stack = createStackNavigator();
 
 const App = () => {
   return (
     <View style={styles.container}>
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="Home" component={Home} />
-        </Stack.Navigator>
-      </NavigationContainer>
+      <Home/>
     </View>
   );
 };
