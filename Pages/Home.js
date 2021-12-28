@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
   container: {
     paddingTop: 70,
     backgroundColor: "#03071e",
+    flex: 1,
   },
   tinytext: {
     fontSize: 25,
