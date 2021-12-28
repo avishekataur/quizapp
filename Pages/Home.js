@@ -8,8 +8,13 @@ import {
   Alert,
 } from "react-native";
 
-const Home = () => {
-  const categories = () => Alert.alert("Not Working");
+interface categoriesProps {
+  navigation: any;
+}
+
+const Home = (props: categoriesProps) => {
+  // const categories = () => Alert.alert("Not Working");
+  const categories = () => props.navigation.navigate("categories");
 
   return (
     <View style={styles.container}>
