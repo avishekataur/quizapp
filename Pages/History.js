@@ -140,7 +140,9 @@ const History = () => {
               marginHorizontal: 30,
             }}
           >
-            <Text style={{ marginLeft: 10, fontSize: 16, color: "white" }}>{option}</Text>
+            <Text style={{ marginLeft: 10, fontSize: 16, color: "white" }}>
+              {option}
+            </Text>
 
             {/* Show Check Or Cross Icon based on correct answer*/}
             {option == correctOption ? (
@@ -276,7 +278,7 @@ const History = () => {
           <View
             style={{
               flex: 1,
-              backgroundColor: "red",
+              backgroundColor: "#03071e",
               alignItems: "center",
               justifyContent: "center",
             }}
@@ -291,7 +293,7 @@ const History = () => {
               }}
             >
               <Text style={{ fontSize: 30, fontWeight: "bold" }}>
-                {score > allQuestions.length / 2 ? "Congratulations!" : "Oops!"}
+                {score > allQuestions.length / 2 ? "Congratulations! 🎉" : "Bad Score 😔"}
               </Text>
 
               <View
@@ -323,7 +325,7 @@ const History = () => {
               <TouchableOpacity
                 onPress={restartQuiz}
                 style={{
-                  backgroundColor: "tomato",
+                  backgroundColor: "#e85d04",
                   padding: 20,
                   width: "100%",
                   borderRadius: 20,
