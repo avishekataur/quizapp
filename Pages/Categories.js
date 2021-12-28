@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
 
 const Categories = () => {
   return (
@@ -25,6 +25,12 @@ const Categories = () => {
           <Text style={styles.buttontext}>Mathematics</Text>
         </TouchableOpacity>
       </View>
+      <View style={styles.frame}>
+        <Image
+          style={styles.banner}
+          source={require("../Images/categories.png")}
+        />
+      </View>
     </View>
   );
 };
@@ -38,8 +44,8 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   header: {
-    paddingBottom: 50,
-    paddingTop: 60,
+    paddingBottom: 30,
+    paddingTop: 40,
     fontSize: 25,
     fontWeight: "bold",
     color: "#e85d04",
@@ -47,8 +53,13 @@ const styles = StyleSheet.create({
     textTransform: "uppercase",
   },
   banner: {
-    width: 300,
-    height: 300,
+    width: 250,
+    height: 250,
+  },
+  frame: {
+    justifyContent: "center",
+    alignItems: "center",
+    paddingTop: 20,
   },
   buttondiv: {
     justifyContent: "center",
