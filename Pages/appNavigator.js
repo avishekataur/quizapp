@@ -18,9 +18,9 @@ const AppNavigator = () => {
           name="home"
           component={Home}
         />
-        <Stack.Screen name="categories" component={Categories} />
-        <Stack.Screen name="question" component={Question} />
-        <Stack.Screen name="result" component={Result} />
+        <Stack.Screen name="CATEGORIES" component={Categories} />
+        <Stack.Screen name="QUESTION" component={Question} />
+        <Stack.Screen name="RESULT" component={Result} />
       </Stack.Navigator>
     </NavigationContainer>
   );

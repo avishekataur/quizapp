@@ -3,8 +3,8 @@ import { StyleSheet, Text, View } from "react-native";
 
 const Categories = () => {
   return (
-    <View styel={styles.container}>
-      <Text styel={styles.tinytext}>Categories</Text>
+    <View style={styles.container}>
+      <Text style={styles.tinytext}>Choose Any Category</Text>
     </View>
   );
 };
@@ -17,8 +17,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   tinytext: {
-    fontSize: 50,
-    color: "white",
+    paddingTop: 80,
+    fontSize: 20,
+    color: "blue",
     textAlign: "center",
+    textTransform: "uppercase",
   },
 });

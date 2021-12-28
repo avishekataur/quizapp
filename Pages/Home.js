@@ -14,7 +14,7 @@ interface categoriesProps {
 
 const Home = (props: categoriesProps) => {
   // const categories = () => Alert.alert("Not Working");
-  const categories = () => props.navigation.navigate("categories");
+  const categories = () => props.navigation.navigate("CATEGORIES");
 
   return (
     <View style={styles.container}>
