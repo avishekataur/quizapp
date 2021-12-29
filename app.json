@@ -2,7 +2,7 @@
   "expo": {
     "name": "QuizPro",
     "slug": "quiz-pro",
-    "description":"This Is An Awesome Quiz App.",
+    "description":"This Is An Awesome React Native Quiz App.",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/quizpro_logo.png",
