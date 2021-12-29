@@ -1,5 +1,6 @@
 
 #QUIZPRO
+</br>
 My First React Native Android App
 
 
@@ -17,6 +18,7 @@ I have used fake JSON data because I have some issues with Open Trivia Api objec
 Check It Out
 </br>
 Live_Preview
+</br>
 https://expo.dev/@avishekataur/quiz-pro
 
 
