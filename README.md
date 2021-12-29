@@ -11,7 +11,7 @@ Such as
 <li>Answer verification</li>
 <li>Quiz progress-bar</li>
 <li>Scores and Restart Quiz</li> 
-
+</br>
 I have used fake JSON data because I have some issues with Open Trivia Api object structure so, I customized my own app data.
 
 Check It Out
