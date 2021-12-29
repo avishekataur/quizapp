@@ -15,6 +15,7 @@ Such as
 </br>
 I have used fake JSON data because I have some issues with Open Trivia Api object structure so, I customized my own app data.
 </br>
+</br>
 Check It Out
 </br>
 Live_Preview
