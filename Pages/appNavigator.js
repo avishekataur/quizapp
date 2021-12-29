@@ -7,6 +7,7 @@ import Categories from "./Categories";
 import History from "./History";
 import Science from "./Science";
 import Geography from "./Geography";
+import Mathematics from "./Mathematics";
 
 const Stack = createStackNavigator();
 
@@ -23,6 +24,7 @@ const AppNavigator = () => {
         <Stack.Screen name="HISTORY" component={History} />
         <Stack.Screen name="TECHNOLOGY_SCIENCE" component={Science} />
         <Stack.Screen name="GEOGRAPHY" component={Geography} />
+        <Stack.Screen name="MATHEMATICS" component={Mathematics} />
       </Stack.Navigator>
     </NavigationContainer>
   );

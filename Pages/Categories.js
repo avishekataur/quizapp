@@ -9,6 +9,7 @@ const Categories = (props: categoriesProps) => {
   const history = () => props.navigation.navigate("HISTORY");
   const science = () => props.navigation.navigate("TECHNOLOGY_SCIENCE");
   const geography = () => props.navigation.navigate("GEOGRAPHY");
+  const mathematics = () => props.navigation.navigate("MATHEMATICS");
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Choose Any Category</Text>
@@ -28,7 +29,7 @@ const Categories = (props: categoriesProps) => {
         </TouchableOpacity>
       </View>
       <View style={styles.buttondiv}>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={mathematics}>
           <Text style={styles.buttontext}>Mathematics</Text>
         </TouchableOpacity>
       </View>
