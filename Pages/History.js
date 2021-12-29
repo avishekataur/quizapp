@@ -292,7 +292,7 @@ const History = () => {
                 alignItems: "center",
               }}
             >
-              <Text style={{ fontSize: 30, fontWeight: "bold" }}>
+              <Text style={{ fontSize: 25, fontWeight: "bold" }}>
                 {score > allQuestions.length / 2
                   ? "Congratulations! 🎉"
                   : "Bad Score 😔"}
@@ -320,7 +320,7 @@ const History = () => {
                     color: "black",
                   }}
                 >
-                  / {allQuestions.length}
+                 &nbsp;/ {allQuestions.length}
                 </Text>
               </View>
               {/* Retry Quiz button */}
