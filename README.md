@@ -13,8 +13,9 @@ Such as
 <li>Scores and Restart Quiz</li> 
 </br>
 I have used fake JSON data because I have some issues with Open Trivia Api object structure so, I customized my own app data.
-
+</br>
 Check It Out
+</br>
 Live_Preview
 https://expo.dev/@avishekataur/quiz-pro
 
