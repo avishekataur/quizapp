@@ -283,6 +283,7 @@ const Geography = () => {
               justifyContent: "center",
             }}
           >
+          
             <View
               style={{
                 backgroundColor: "white",

@@ -1,12 +1,13 @@
 {
   "expo": {
-    "name": "quizapp",
-    "slug": "quizapp",
+    "name": "QuizPro",
+    "slug": "quiz-pro",
+    "description":"This Is An Awesome Quiz App.",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/quizpro_logo.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/quizpro_banner.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
