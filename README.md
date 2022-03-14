@@ -1,25 +1,26 @@
+# QUIZPRO
 
-#QUIZPRO
-</br>
-My First React Native Android App
+A React Native Android App.
 
+[Live Preview](https://expo.dev/@avishekataur/quiz-pro) 
+
+## Features
 
 This is a basic quiz app with a few nice features and functionalities. 
+<br/>
 Such as 
-<li>React-Native stack navigation for screen routing</li>
-<li>Selecting different question categories</li>
-<li>Questions with multiple-options</li>
-<li>Answer verification</li>
-<li>Quiz progress-bar</li>
-<li>Scores and Restart Quiz</li> 
-</br>
-I have used fake JSON data because I have some issues with Open Trivia Api object structure so, I customized my own app data.
-</br>
-</br>
-Check It Out
-</br>
-Live_Preview
-</br>
-https://expo.dev/@avishekataur/quiz-pro
+- React-Native stack navigation for screen routing
+- Selecting different question categories
+- Questions with multiple-options
+- Answer verification
+- Quiz progress-bar
+- Scores and Restart Quiz
+
+## Technology
+
+![](https://img.shields.io/badge/React_Native-16181D?style=for-the-badge&logo=react&logoColor=61DAFB)
+
+![](https://img.shields.io/badge/React_Navigator-7B61C1?style=for-the-badge&logo=navigator&logoColor=61DAFB)
+
 
 
